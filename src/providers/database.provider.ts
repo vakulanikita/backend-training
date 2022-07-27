@@ -13,7 +13,9 @@ export const databaseProvider = [
         password: 'mwxdurMGLqXVeYHJpum1OO5ALHb5PZ1H',
         database: 'rtyooyqx',
         entities: [Post],
-        synchronize: true
+        synchronize: true,
+        url: process.env.DATABASE_URL,
+        ssl: { rejectUnauthorized: false }
       })
   },
 ];

@@ -18,16 +18,16 @@ export class PostsController {
 
   @Get(':id')
   getOnePost(@Param('id') id: string): Promise<PostEntity> {
-    return this.postsService.findOne(Number(id));
+    return this.postsService.findOne(+id);
   }
 
   @Patch(':id')
   updatePost(@Param('id') id: string, @Body() post: PostEntity): Promise<PostEntity> {
-    return this.postsService.update(Number(id), post);
+    return this.postsService.update(+id, post);
   }
 
   @Delete(':id')
   deletePost(@Param('id') id: string) {
-    return this.postsService.delete(Number(id));
+    return this.postsService.delete(+id);
   }
 }
