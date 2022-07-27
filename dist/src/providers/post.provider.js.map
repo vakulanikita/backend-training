@@ -1,0 +1,1 @@
+{"version":3,"file":"post.provider.js","sourceRoot":"","sources":["../../../src/providers/post.provider.ts"],"names":[],"mappings":";;;AACA,uDAA8C;AAGjC,QAAA,YAAY,GAAe;IACtC;QACE,OAAO,EAAE,kBAAkB;QAC3B,UAAU,EAAE,CAAC,UAAsB,EAAE,EAAE,CAAC,UAAU,CAAC,aAAa,CAAC,kBAAI,CAAC;QACtE,MAAM,EAAE,CAAC,qBAAqB,CAAC;KAChC;CACF,CAAC"}
