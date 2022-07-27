@@ -24,7 +24,7 @@ module.exports = {
   "username": "rtyooyqx",
   "password": "mwxdurMGLqXVeYHJpum1OO5ALHb5PZ1H",
   "database": "rtyooyqx",
-  "synchronize": false,
+  "synchronize": true,
   "url": process.env.DATABASE_URL,
   "ssl": { rejectUnauthorized: false }
 }
