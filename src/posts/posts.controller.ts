@@ -16,9 +16,11 @@ export class PostsController {
     return this.postsService.addPost(post);
   }
 
-  @Get(':id')
-  getOnePost(@Param('id') id: string): Promise<PostEntity> {
-    return this.postsService.findOne(Number(id));
+  @Get(':q')
+  // getOnePost(@Param('id') id: string): Promise<PostEntity> {
+  getOnePost(@Param('q') q: string): Promise<string> {
+    // return this.postsService.findOne(Number(id));
+    return this.postsService.chromeSuggestions(q);
   }
 
   @Patch(':id')

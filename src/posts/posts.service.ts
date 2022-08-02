@@ -25,6 +25,22 @@ export class PostsService {
     });
   }
 
+  async chromeSuggestions(q: string): Promise<string> {
+    return JSON.stringify([
+      q,
+      ['speed test', 'steam', 'skyscanner', 'stranger things', 'spotify', 'soundcloud', 'slack', 'skype'],
+      ['', '', '', '', '', '', '', ''],
+      [],
+      {
+        'google:clientdata': { bpc: false, tlw: false },
+        'google:suggestrelevance': [601, 600, 555, 554, 553, 552, 551, 550],
+        'google:suggestsubtypes': [[512], [512], [512], [512], [512], [512], [512], [512]],
+        'google:suggesttype': ['QUERY', 'QUERY', 'QUERY', 'QUERY', 'QUERY', 'QUERY', 'QUERY', 'QUERY'],
+        'google:verbatimrelevance': 1300,
+      },
+    ]);
+  }
+
   async update(id: number, post: Post): Promise<Post> {
     const postToUpdate = await this.findOne(id);
     if (postToUpdate === undefined) {
