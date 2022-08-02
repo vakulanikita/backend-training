@@ -28,7 +28,7 @@ export class PostsService {
   async chromeSuggestions(q: string): Promise<string> {
     return JSON.stringify([
       q,
-      ['speed test', 'steam', 'skyscanner', 'stranger things', 'spotify', 'soundcloud', 'slack', 'skype'],
+      [q + 'speed test', q + 'steam', q + 'skyscanner', 'stranger things', 'spotify', 'soundcloud', 'slack', 'skype'],
       ['', '', '', '', '', '', '', ''],
       [],
       {
@@ -40,6 +40,22 @@ export class PostsService {
       },
     ]);
   }
+
+  // [
+  //   "123",
+  //   [
+  //     "1234567890 игры",
+  //     "123",
+  //     "1234567890 игры 123456789012345678901234567890 0033333",
+  //     "12345",
+  //     "1234567890",
+  //     "1234",
+  //     "1234567890 игры 1234567890 1234567890 1234567890",
+  //     "1234567890qwertyuiop[]",
+  //     "1234567890 игры 33",
+  //     "123456789",
+  //   ],
+  // ];
 
   async update(id: number, post: Post): Promise<Post> {
     const postToUpdate = await this.findOne(id);
