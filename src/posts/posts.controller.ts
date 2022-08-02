@@ -25,11 +25,11 @@ export class PostsController {
 
   @Patch(':id')
   updatePost(@Param('id') id: string, @Body() post: PostEntity): Promise<PostEntity> {
-    return this.postsService.update(Number(id), post);
+    return this.postsService.update(+id, post);
   }
 
   @Delete(':id')
   deletePost(@Param('id') id: string) {
-    return this.postsService.delete(Number(id));
+    return this.postsService.delete(+id);
   }
 }
