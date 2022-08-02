@@ -28,16 +28,7 @@ export class PostsService {
   async chromeSuggestions(q: string): Promise<string> {
     return JSON.stringify([
       q,
-      [q + 'speed test', q + 'steam', q + 'skyscanner', 'stranger things', 'spotify', 'soundcloud', 'slack', 'skype'],
-      ['', '', '', '', '', '', '', ''],
-      [],
-      {
-        'google:clientdata': { bpc: false, tlw: false },
-        'google:suggestrelevance': [601, 600, 555, 554, 553, 552, 551, 550],
-        'google:suggestsubtypes': [[512], [512], [512], [512], [512], [512], [512], [512]],
-        'google:suggesttype': ['QUERY', 'QUERY', 'QUERY', 'QUERY', 'QUERY', 'QUERY', 'QUERY', 'QUERY'],
-        'google:verbatimrelevance': 1300,
-      },
+      [q + ' speed test', q + ' steam', q + 'skyscanner', 'stranger things', 'spotify', 'soundcloud', 'slack', 'skype'],
     ]);
   }
 
