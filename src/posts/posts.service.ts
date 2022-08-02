@@ -28,7 +28,7 @@ export class PostsService {
   async chromeSuggestions(q: string): Promise<string> {
     return JSON.stringify([
       q,
-      [q + ' speed test', q + ' steam', q + 'skyscanner', 'stranger things', 'spotify', 'soundcloud', 'slack', 'skype'],
+      [q + ' speed test', q + ' steam', q + ' skyscanner', 'stranger things', 'spotify', 'soundcloud', 'slack', 'skype'],
     ]);
   }
 
